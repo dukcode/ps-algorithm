@@ -14,7 +14,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 public abstract class ProblemSolvingTest {
 
-  private int failureTimeout;
+  private final int failureTimeout;
   private PrintStream stdOut;
   private OutputStream captor;
 
@@ -35,7 +35,7 @@ public abstract class ProblemSolvingTest {
     Assertions.assertTimeout(failureTimeout, () -> {
       run(input);
       org.assertj.core.api.Assertions.assertThat(output().trim())
-          .isEqualTo(cleanEachLine(expected));
+          .isEqualTo(cleanEachLine(expected).trim());
     });
   }
 
@@ -64,7 +64,7 @@ public abstract class ProblemSolvingTest {
   }
 
   private String cleanEachLine(String source) {
-    List<String> lines = Arrays.stream(source.split("\n")).map(String::trim)
+    List<String> lines = Arrays.stream(source.split("\n")).map(String::stripTrailing)
         .toList();
     StringJoiner lineJoiner = new StringJoiner("\n");
     for (String line : lines) {
