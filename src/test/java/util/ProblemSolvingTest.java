@@ -4,11 +4,12 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
-import java.util.stream.Stream;
+import java.util.Arrays;
+import java.util.List;
+import java.util.StringJoiner;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 public abstract class ProblemSolvingTest {
@@ -33,7 +34,8 @@ public abstract class ProblemSolvingTest {
   void test(String input, String expected) {
     Assertions.assertTimeout(failureTimeout, () -> {
       run(input);
-      org.assertj.core.api.Assertions.assertThat(output().trim()).isEqualTo(expected.trim());
+      org.assertj.core.api.Assertions.assertThat(output().trim())
+          .isEqualTo(cleanEachLine(expected));
     });
   }
 
@@ -58,7 +60,18 @@ public abstract class ProblemSolvingTest {
   }
 
   protected final String output() {
-    return this.captor.toString().trim();
+    return cleanEachLine(this.captor.toString());
+  }
+
+  private String cleanEachLine(String source) {
+    List<String> lines = Arrays.stream(source.split("\n")).map(String::trim)
+        .toList();
+    StringJoiner lineJoiner = new StringJoiner("\n");
+    for (String line : lines) {
+      lineJoiner.add(line);
+    }
+
+    return lineJoiner.toString();
   }
 
   protected abstract void runMain() throws Exception;
