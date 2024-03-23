@@ -1,4 +1,4 @@
-package com.dukcode.baekjoon;
+package com.dukcode.baekjoon.day240322;
 
 import java.io.BufferedWriter;
 import java.io.IOException;

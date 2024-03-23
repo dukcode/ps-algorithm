@@ -1,4 +1,4 @@
-package com.dukcode.baekjoon;
+package com.dukcode.baekjoon.day240322;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class B1330 {
+public class B2525 {
 
   private static BufferedReader br;
   private static BufferedWriter bw;
@@ -20,23 +20,24 @@ public class B1330 {
     st = new StringTokenizer(br.readLine());
     int a = Integer.parseInt(st.nextToken());
     int b = Integer.parseInt(st.nextToken());
+    int c = Integer.parseInt(br.readLine());
 
-    bw.write(solve(a, b));
+    bw.write(solve(a, b, c));
+
     br.close();
     bw.close();
-
   }
 
-  private static String solve(int a, int b) {
-    if (a < b) {
-      return "<";
-    }
+  private static String solve(int a, int b, int c) {
+    int hour = a;
+    int min = b + c;
 
-    if (a > b) {
-      return ">";
-    }
+    hour += min / 60;
+    min %= 60;
 
-    return "==";
+    hour %= 24;
+
+    return String.format("%d %d", hour, min);
   }
 
 }
