@@ -1,6 +1,5 @@
-package com.dukcode.baekjoon;
+package com.dukcode.baekjoon.day240322;
 
-import com.dukcode.baekjoon.day240322.B4101;
 import java.util.stream.Stream;
 import org.junit.jupiter.params.provider.Arguments;
 import util.ProblemSolvingTest;

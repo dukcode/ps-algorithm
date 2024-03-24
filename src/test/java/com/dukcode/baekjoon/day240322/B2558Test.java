@@ -1,13 +1,12 @@
-package com.dukcode.baekjoon;
+package com.dukcode.baekjoon.day240322;
 
-import com.dukcode.baekjoon.day240322.B14681;
 import java.util.stream.Stream;
 import org.junit.jupiter.params.provider.Arguments;
 import util.ProblemSolvingTest;
 
-class B14681Test extends ProblemSolvingTest {
+class B2558Test extends ProblemSolvingTest {
 
-  public B14681Test() {
+  public B2558Test() {
     super(3);
   }
 
@@ -15,53 +14,45 @@ class B14681Test extends ProblemSolvingTest {
     return Stream.of(
         Arguments.of(
             """
-                12
-                5
-                """,
-            """
                 1
-                """),
-        Arguments.of(
-            """
-                9
-                -13""",
-            """
-                4
-                """),
-        Arguments.of(
-            """
-                1000
-                1000""",
-            """
-                1
-                """),
-        Arguments.of(
-            """
-                -1000
-                1000""",
-            """
-                2
-                """),
-        Arguments.of(
-            """
-                -1000
-                -1000""",
+                2""",
             """
                 3
                 """),
         Arguments.of(
             """
-                1000
-                -1000""",
+                1
+                1""",
             """
-                4
+                2
+                """),
+        Arguments.of(
+            """
+                1
+                9""",
+            """
+                10
+                """),
+        Arguments.of(
+            """
+                9
+                1""",
+            """
+                10
+                """),
+        Arguments.of(
+            """
+                9
+                9""",
+            """
+                18
                 """)
     );
   }
 
   @Override
   protected void runMain() throws Exception {
-    B14681.main(new String[]{});
+    B2558.main(new String[]{});
   }
 
 }
