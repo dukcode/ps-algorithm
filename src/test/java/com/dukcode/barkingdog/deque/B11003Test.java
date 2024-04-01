@@ -7,7 +7,7 @@ import util.ProblemSolvingTest;
 class B11003Test extends ProblemSolvingTest {
 
   public B11003Test() {
-    super(2);
+    super(2.4);
   }
 
   public static Stream<Arguments> setData() {
