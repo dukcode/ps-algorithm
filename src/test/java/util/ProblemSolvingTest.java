@@ -14,11 +14,11 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 public abstract class ProblemSolvingTest {
 
-  private final int failureTimeout;
+  private final double failureTimeout;
   private PrintStream stdOut;
   private OutputStream captor;
 
-  public ProblemSolvingTest(int failureTimeout) {
+  public ProblemSolvingTest(double failureTimeout) {
     this.failureTimeout = failureTimeout;
   }
 
