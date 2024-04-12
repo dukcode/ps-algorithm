@@ -1,5 +1,6 @@
 package com.dukcode.samsung;
 
+import com.dukcode.barkingdog.simulation.B18808;
 import java.util.stream.Stream;
 import org.junit.jupiter.params.provider.Arguments;
 import util.ProblemSolvingTest;

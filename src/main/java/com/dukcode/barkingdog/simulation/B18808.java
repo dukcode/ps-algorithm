@@ -1,4 +1,4 @@
-package com.dukcode.samsung;
+package com.dukcode.barkingdog.simulation;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
