@@ -1,4 +1,4 @@
-package com.dukcode.jongman.chap28_dfs;
+package com.dukcode.ps.dfs.topology_sort;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -9,7 +9,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Dictionary2 {
+// https://www.algospot.com/judge/problem/read/DICTIONARY
+public class Dictionary {
 
   private static final int NUM_ALPHABET = 26;
 
