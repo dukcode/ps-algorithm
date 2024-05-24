@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+// https://www.acmicpc.net/problem/1766
 public class B1766 {
 
   private static BufferedReader br;

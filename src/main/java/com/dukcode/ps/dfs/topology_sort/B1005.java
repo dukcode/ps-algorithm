@@ -8,6 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+// https://www.acmicpc.net/problem/1005
 public class B1005 {
 
   private static BufferedReader br;

@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+// https://www.acmicpc.net/problem/2056
 public class B2056 {
 
   private static BufferedReader br;
